@@ -1,0 +1,97 @@
+---
+interface Props {
+  logos: string[];
+}
+
+const { logos = ['/logos/1.png', '/logos/1.png','/logos/2.png', '/logos/3.png', '/logos/1.png', '/logos/2.png', '/logos/3.png'] } = Astro.props;
+---
+<div id="logo-container" class="relative w-full flex items-center h-128 justify-center">
+  {logos.map((logo, i) => (
+    <img
+      class="absolute opacity-0 h-64 w-64 transition-opacity duration-500"
+      src={logo}
+      alt={`Logo ${i+1}`}
+      data-logo-index={i}
+    />
+  ))}
+</div>
+<style>
+  .logo-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .logo {
+    position: absolute;
+    width: 200px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+</style>
+<script is:inline src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+<script is:inline>
+console.log("Page loaded - initializing Lenis scroll listener");
+const lenis = new Lenis();
+const logoContainer = document.querySelector('#logo-container');
+const logos = document.querySelectorAll('[data-logo-index]');
+// Use Intersection Observer to detect when the container is in view
+const observer = new IntersectionObserver(
+    (entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+        // Calculate the scroll position where the container is centered in the viewport
+        const containerTop = logoContainer.getBoundingClientRect().top + window.scrollY;
+        const containerHeight = logoContainer.offsetHeight;
+        const viewportHeight = window.innerHeight;
+        const centerPosition = containerTop + containerHeight / 2 - viewportHeight / 2;
+
+        // Scroll to the center position
+        lenis.scrollTo(centerPosition);
+
+        // Prevent further scrolling by setting the body's overflow to hidden
+        document.body.style.overflow = 'hidden';
+
+        // Disable Lenis while the container is in view
+        lenis.stop();
+
+        // Start animation logic
+        lenis.on('scroll', (e) => {
+            const scrollY = window.scrollY;
+            const scrollStart = containerTop - viewportHeight;
+            const scrollEnd = containerTop + containerHeight;
+            const scrollProgress = Math.min(
+            Math.max((scrollY - scrollStart) / (scrollEnd - scrollStart), 0),
+            1
+            );
+
+            // Only animate if the container is in view
+            if (scrollProgress >= 0.15 && scrollProgress <= 1) {
+            logos.forEach((logo, index) => {
+                const logoProgressStart = index * 1 / logos.length;
+                const logoProgressEnd = (index + 1) * 1 / logos.length;
+                if (scrollProgress >= logoProgressStart && scrollProgress < logoProgressEnd) {
+                logo.style.opacity = 1;
+                } else {
+                logo.style.opacity = 0;
+                }
+            });
+            }
+        });
+        } else {
+        // Restore normal scrolling when the container is no longer in view
+        document.body.style.overflow = '';
+        // Re-enable Lenis
+        lenis.start();
+        }
+    });
+    },
+    { threshold: 0.1 }
+);
+observer.observe(logoContainer);
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+</script>
+
