@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <div class="h-screen w-screen bg-base-100 flex flex-col gap-4 items-center justify-center">
+        <img class="h-32 w-32 animate-pulse" src="/logo.png" />
+        <button class="btn" onclick="lang_modal.showModal()">open modal</button>
+
+
+        <dialog id="lang_modal" class="modal">
+            <div class="modal-box">
+                <h3 class="text-lg text-center font-bold">Select a language</h3>
+                <p>This website is avaible in multiples languages.
+                    Select the language you are most xx of to get started.</p>
+                <p>
+                   Ce site est disponible en plusieurs langues.
+                   Séléctionnez la langue qui vous est la plus familière pour commencer.  
+                </p>
+                <div class="flex justify-center w-full gap-4 pt-4">
+                    <a href="/fr" class="btn px-8 py-8 text-4xl md:text-6xl">🇫🇷</a>
+                    <a href="/en" class="btn px-8 py-8 text-4xl md:text-6xl">🇬🇧</a>
+                </div>
+            </div>
+        </dialog>
+
+    </div>
+</Layout>

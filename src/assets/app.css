@@ -7,10 +7,48 @@
 }
 
 @plugin "daisyui/theme" {
-  name: "luxury";
+  name: "demolight";
   default: true;
-  prefersdark: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.002 247.839);
+  --color-base-200: oklch(92% 0.006 264.531);
+  --color-base-300: oklch(87% 0.01 258.338);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: oklch(80% 0.114 19.571);
+  --color-primary-content: oklch(41% 0.159 10.272);
+  --color-secondary: oklch(90% 0.076 70.697);
+  --color-secondary-content: oklch(47% 0.137 46.201);
+  --color-accent: oklch(91% 0.096 180.426);
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(27% 0.041 260.031);
+  --color-neutral-content: oklch(92% 0.013 255.508);
+  --color-info: oklch(82% 0.111 230.318);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(92% 0.084 155.995);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(94% 0.129 101.54);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.3125rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "demodark";
+  default: false;
+  prefersdark: false;
   color-scheme: "dark";
+  --color-base-100: oklch(22% 0.041 260.031);
+  --color-base-200: oklch(20% 0.042 265.755);
+  --color-base-300: oklch(12% 0.042 264.695);
   --color-base-content: oklch(92% 0.006 264.531);
   --color-primary: oklch(80% 0.114 19.571);
   --color-primary-content: oklch(41% 0.159 10.272);
@@ -22,11 +60,11 @@
   --color-neutral-content: oklch(44% 0.043 257.281);
   --color-info: oklch(82% 0.111 230.318);
   --color-info-content: oklch(29% 0.066 243.157);
-  --color-success: oklch(66% 0.084 155.995);
+  --color-success: oklch(92% 0.084 155.995);
   --color-success-content: oklch(37% 0.077 168.94);
-  --color-warning: oklch(76% 0.129 101.54);
+  --color-warning: oklch(94% 0.129 101.54);
   --color-warning-content: oklch(41% 0.112 45.904);
-  --color-error: oklch(56% 0.194 13.428);
+  --color-error: oklch(71% 0.194 13.428);
   --color-error-content: oklch(27% 0.105 12.094);
   --radius-selector: 1rem;
   --radius-field: 0.5rem;
@@ -51,11 +89,133 @@
 }
 
 :root {
-  --font-sans : "Jetbrains Mono", "Fluent Emoji Color", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font: "Satoshi";
+  --default-font-family: "Satoshi" !important;
 }
 
-h1, h2, h3, h4, h5, h6, .heading {
-  font-family: 'Minecraft Five', sans-serif;
+
+.pagefind-ui {
+  --pagefind-ui-scale: 0.75;
+  --pagefind-ui-primary: var(--color-base-content);
+  --pagefind-ui-text: var(--color-base-content);
+  --pagefind-ui-background: var(--color-base-100);
+  --pagefind-ui-border: var(--color-base-300);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 0.25rem;
+  --pagefind-ui-font: var(--default-font-family);
+}
+
+
+/* Satoshi font */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Regular'), local('Satoshi-Regular'),
+    url('/fonts/Satoshi-Regular.woff2') format('woff2'),
+    url('/fonts/Satoshi-Regular.woff') format('woff'),
+    url('/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Bold Italic'), local('Satoshi-BoldItalic'),
+    url('/fonts/Satoshi-BoldItalic.woff2') format('woff2'),
+    url('/fonts/Satoshi-BoldItalic.woff') format('woff'),
+    url('/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Medium'), local('Satoshi-Medium'),
+    url('/fonts/Satoshi-Medium.woff2') format('woff2'),
+    url('/fonts/Satoshi-Medium.woff') format('woff'),
+    url('/fonts/Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Light'), local('Satoshi-Light'),
+    url('/fonts/Satoshi-Light.woff2') format('woff2'),
+    url('/fonts/Satoshi-Light.woff') format('woff'),
+    url('/fonts/Satoshi-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Bold'), local('Satoshi-Bold'),
+    url('/fonts/Satoshi-Bold.woff2') format('woff2'),
+    url('/fonts/Satoshi-Bold.woff') format('woff'),
+    url('/fonts/Satoshi-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Italic'), local('Satoshi-Italic'),
+    url('/fonts/Satoshi-Italic.woff2') format('woff2'),
+    url('/fonts/Satoshi-Italic.woff') format('woff'),
+    url('/fonts/Satoshi-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Light Italic'), local('Satoshi-LightItalic'),
+    url('/fonts/Satoshi-LightItalic.woff2') format('woff2'),
+    url('/fonts/Satoshi-LightItalic.woff') format('woff'),
+    url('/fonts/Satoshi-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Black'), local('Satoshi-Black'),
+    url('/fonts/Satoshi-Black.woff2') format('woff2'),
+    url('/fonts/Satoshi-Black.woff') format('woff'),
+    url('/fonts/Satoshi-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Black Italic'), local('Satoshi-BlackItalic'),
+    url('/fonts/Satoshi-BlackItalic.woff2') format('woff2'),
+    url('/fonts/Satoshi-BlackItalic.woff') format('woff'),
+    url('/fonts/Satoshi-BlackItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi Medium Italic'), local('Satoshi-MediumItalic'),
+    url('/fonts/Satoshi-MediumItalic.woff2') format('woff2'),
+    url('/fonts/Satoshi-MediumItalic.woff') format('woff'),
+    url('/fonts/Satoshi-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
 }
 
 
@@ -73,4 +233,11 @@ h1, h2, h3, h4, h5, h6, .heading {
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+
+
+.menu-title {
+  font-family: 'Minecraft Five', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
