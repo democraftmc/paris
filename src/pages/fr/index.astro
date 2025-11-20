@@ -1,8 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Card from "../../componets/Card.astro";
+import { Icon } from "astro-icon/components";
 ---
-<Layout>
-    <div class="h-screen w-screen bg-base-100 flex flex-col gap-4 items-center justify-center p-3">
+<Layout title="DEMOCRAFT à PARIS">
+    <div class="h-screen bg-base-100 flex flex-col gap-4 items-center justify-center p-3">
         <img class="h-32 w-32 animate-pulse" src="/logo.png" />
         <h1 class="text-4xl text-center">Nous Sommes DEMOCRAFT</h1>
         <p class="text-center">Nous avons vraiment, <i>vraiment</i> hâte d'accueilir tout les incroyables talents qui passent par cette page 💖</p>
@@ -10,5 +12,19 @@ import Layout from "../../layouts/Layout.astro";
             <div class="divider"></div>
         </div>
         <p class="text-center">Nos petits informaticiens travaillent encore sur cette page. Revenez plus tard pour en apprendre plus sur nous !</p>
+        <p></p>
+        <p><i>Pssst ! Quelques petits tests sont cachés justes en dessous !</i></p>
+        <p></p>
+        <Icon name="lucide:circle-chevron-down" class="animate-bounce text-3xl" />
+       
+    </div>
+    <div>
+        <h2 class="text-center text-4xl font-bold">Projets</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mx-4 ">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+        </div>
     </div>
 </Layout>
