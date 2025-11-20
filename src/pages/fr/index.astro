@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Card from "../../componets/Card.astro";
+import Hero from "../../componets/Hero.astro";
 import { Icon } from "astro-icon/components";
 ---
 <Layout title="DEMOCRAFT à PARIS">
@@ -18,9 +19,14 @@ import { Icon } from "astro-icon/components";
         <Icon name="lucide:circle-chevron-down" class="animate-bounce text-3xl" />
        
     </div>
+    <Hero />
     <div>
         <h2 class="text-center text-4xl font-bold">Projets</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mx-4 ">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mx-8 my-6">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
             <Card/>
             <Card/>
             <Card/>
