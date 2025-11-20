@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.10",
-    "@astrojs/sitemap": "^3.4.0",
+    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/sitemap": "3.6.0",
     "@iconify-json/lucide": "^1.2.44",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.7.13",
+    "astro": "^5.16.0",
     "astro-icon": "^1.1.5",
     "astro-lenis": "^1.0.5",
     "daisyui": "^5.0.35",
