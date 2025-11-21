@@ -7,7 +7,7 @@
 }
 
 @plugin "daisyui/theme" {
-  name: "demolight";
+  name: "light";
   default: true;
   prefersdark: false;
   color-scheme: "light";
@@ -42,7 +42,7 @@
 }
 
 @plugin "daisyui/theme" {
-  name: "demodark";
+  name: "dark";
   default: false;
   prefersdark: false;
   color-scheme: "dark";
@@ -76,7 +76,7 @@
   --noise: 0;
 }
 
-@custom-variant dark (&:where([data-theme=demodark], [data-theme=demodark] *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
   scrollbar-color: color-mix(in oklch,currentColor 35%,#0000) var(--color-base-100);
