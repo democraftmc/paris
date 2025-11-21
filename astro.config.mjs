@@ -6,10 +6,13 @@ import mdx from "@astrojs/mdx";
 
 import lenis from "astro-lenis";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
+  site: "https://paris.democraft.studio",
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [icon(), mdx(), lenis()]
+  integrations: [icon(), mdx(), lenis(), sitemap()]
 });
