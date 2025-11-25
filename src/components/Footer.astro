@@ -1,0 +1,25 @@
+---
+---
+<footer class="footer footer-horizontal footer-center bg-base-300 text-base-content p-4 gap-1">
+  <img class="h-20 w-auto" src="/images/demo_love.png" />
+  <aside>
+    <button onclick="toggleTheme()" class="btn" data-toggle-theme="dark,light" data-act-class="">Change your theme</button>
+    <p>Copyright © {new Date().getFullYear()} - ARR DEMOCRAFT STUDIOS</p>
+  </aside>
+</footer>
+
+
+<script is:inline>
+function toggleTheme() {
+  const themeFromStorage = localStorage.getItem("theme");
+  if (themeFromStorage == "light") {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+  document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+  );
+}
+</script>

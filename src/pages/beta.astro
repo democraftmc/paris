@@ -1,20 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../componets/Card.astro";
-import Hero from "../componets/Hero.astro";
-import Mission from "../componets/Mission.astro"
+import Card from "../components/Card.astro";
+import Hero from "../components/en/Hero.astro";
+import Mission from "../components/en/Mission.astro";
 import { Icon } from "astro-icon/components";
 ---
+
 <Layout>
     <Hero />
     <Mission />
-    <div>
-        <h2 class="text-center text-4xl font-bold">Projets</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 my-6 px-4 md:px-8">
-            <Card title="MetaCtx" badges=["Java"]/>
-            <Card/>
-            <Card/>
-            <Card/>
+    <div class="py-12">
+        <h1 class="text-center text-5xl font-bold">Projets</h1>
+        <p class="text-center text-lg mb-6">
+            Want to help us? Here are some projects that need your talents!
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 my-6 px-4 md:px-24">
+            <Card
+                title="MetaCtx"
+                badges={["Java", "Minecraft"]}
+                logo="/logos/MetaCtx.webp"
+            >
+                <p>
+                    Adaptative translation using Luckperms context system, <u
+                        >meta</u
+                    >.
+                </p>
+                <p>Builed in Java using Bukkit & Luckperms API.</p>
+            </Card>
+            <Card
+                title="Playround"
+                badges={["UI", "UX", "CSS"]}
+                logo="/logos/PlayRound.webp"
+            >
+                <p>
+                    Complete UI Library for all of DEMOCRAFT's web applications.
+                </p>
+                <p>Builed with TailwindCSS</p>
+            </Card>
+            <Card
+                title="RC Smart"
+                badges={["Java", "Abstract"]}
+                logo="/logos/Smart.webp"
+            >
+                <p>
+                    Server Orchestrator: Create, Update & Delete servers on the
+                    go, to dinamically manage resources.
+                </p>
+                <p>Builed in Java using RustyConnector.</p>
+            </Card>
+            <Card
+                title="Code: LFC"
+                badges={["Python", "JSON", "Geyser"]}
+                logo="/logos/LFC.png"
+            >
+                <p>In french, we call this one a "Usine à Gaz".<br /> 3D model converter builded in pure Python, compatible with Geyser.</p>
+            </Card>
+            <div class="md:col-span-4 flex flex-col sm:flex-row justify-center mt-6 gap-1 justify-items-center items-center">
+                <span><i>Don't have any fancy talents yet?</i></span>
+                <span>Help us by
+                <a class="inline-block font-bold text-primary link link-hover" href="share">
+                    spreading the word
+                    <Icon name="lucide:arrow-right" class="inline-block text-primary" />
+                </a>
+                </span>
+            </div>
         </div>
     </div>
 </Layout>

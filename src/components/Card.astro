@@ -1,0 +1,37 @@
+---
+const { title  = "Cool",
+        logo  = "/logos/3.png",
+        badges = ["1", "2", "3"]
+} = Astro.props
+---
+
+<a class="hover-3d cursor-pointer">
+    <div class="card w-full bg-base-100 border-2 border-base-content/20 shadow-sm">
+        <div class="card-body">
+            <div class="flex justify-between">
+                <div>
+                    <div class="flex gap-2">
+                        {
+                            badges.map(element => (
+                            <span class="badge badge-xs badge-primary">{ element }</span>  
+                            ))
+                        }
+                    </div>
+                    <h2 class="text-2xl font-bold">{ title }</h2>
+                </div>
+                <img src={logo} class="h-14 w-14 rounded-lg" />
+            </div>
+            <div>
+                <slot />
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</a>
