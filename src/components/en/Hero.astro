@@ -3,8 +3,8 @@
 ---
 <div class="relative w-full h-[45vh] md:h-[70vh] overflow-hidden">
 
- <div class="absolute md:m-16 inset-0 rounded-b-2xl md:rounded-2xl bg-[url('https://wiki.democraft.fr/api/lobby')] bg-cover bg-center bg-no-repeat"></div>
-        <div class="relative z-10 container mx-auto px-4 pointer-events-none flex items-center h-full w-full min-h-full">
+ <div id="bg" class="absolute md:m-16 inset-0 rounded-b-2xl md:rounded-2xl bg-cover bg-center bg-no-repeat" style="background-image: url('https://wiki.democraft.fr/api/lobby');"></div>   
+    <div class="relative z-10 container mx-auto px-4 pointer-events-none flex items-center h-full w-full min-h-full">
             <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-8 w-full">
                 <div class="w-full lg:w-1/2 flex justify-center lg:justify-end pointer-events-auto">
                     <div class="group relative w-full max-w-lg max-sm:h-16 aspect-video rounded-2xl border-4 border-white/10 cursor-pointer transition-all duration-700 ease-in-out
@@ -35,3 +35,25 @@
             </div>
         </div>
 </div>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+        const backgroundImageList = [
+            "/lobby/0.png",
+            "/lobby/1.jpeg",
+            "/lobby/2.jpeg",
+            "/lobby/3.jpeg",
+            "/lobby/4.jpeg",
+            "/lobby/5.jpeg",
+            "/lobby/6.jpeg",
+            "/lobby/7.jpeg",
+            "/lobby/8.png",
+            "/lobby/vaati1.png",
+            "/lobby/vaati2.png",
+            "/lobby/vaati3.png",
+        ]
+        const randomBackgroundImage = backgroundImageList[Math.floor(Math.random() * backgroundImageList.length)];
+        document.getElementById('bg').style.backgroundImage = `url(${randomBackgroundImage})`;
+        console.log("Set hero background to:", randomBackgroundImage);
+    })
+</script>
