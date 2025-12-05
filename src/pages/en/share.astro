@@ -1,0 +1,126 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+   
+    <div class="hero min-h-screen relative">
+        <div class="absolute inset-0 w-full h-full overflow-hidden bg-black">
+            <video class="w-full h-full object-cover opacity-50" autoplay loop muted playsinline
+                src="/bg.mp4"
+                poster="https://wiki.democraft.fr/api/lobby">
+            </video>
+            <div class="video-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="hero-content text-center text-neutral-content relative z-10 mt-10">
+            <div class="max-w-4xl">
+                <div class="brand-font font-black text-6xl md:text-9xl leading-none tracking-tighter mb-4 drop-shadow-2xl">
+                    <span class="block text-4xl md:text-6xl mb-2">1, 2, 3...</span>
+                    <h1 class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">PLAY!</h1>
+                </div>
+                
+                <p class="mb-8 text-lg md:text-xl font-medium text-white/80 max-w-2xl mx-auto">
+                    We are all waiting for you to join the adventure :)
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#step-1" class="btn btn-outline btn-wide text-white border-white/30 hover:bg-white hover:text-black hover:border-white">
+                        How to Join
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 w-full flex justify-center animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+        </div>
+    </div>
+
+    <div id="step-1" class="hero min-h-[80vh] bg-base-100 relative overflow-hidden">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-12 w-full px-6 py-20">
+            <div class="lg:w-1/2 relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop" class="relative rounded-2xl shadow-2xl w-full object-cover h-[400px] border border-white/10" alt="Player Gaming" />
+            </div>
+
+            <div class="lg:w-1/2 relative z-10">
+                <div class="badge badge-primary badge-outline mb-4">The Foundation</div>
+                <h2 class="text-5xl font-bold brand-font mb-6">Built for <span class="italic text-primary">You</span>.</h2>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Democraft isn't about us—it's about you. We stripped away the pay-to-win mechanics and restrictive rules to get back to the core of what matters: <strong>The Gameplay.</strong>
+                </p>
+                <div class="flex gap-4">
+                    <div class="stat bg-base-200/50 rounded-box border border-white/5 p-4 w-auto">
+                        <div class="stat-value text-2xl text-primary">100%</div>
+                        <div class="stat-desc text-gray-400">Community Driven</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="min-h-screen bg-base-300 relative py-20 px-6">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <div class="badge badge-accent badge-outline mb-4">Guerrilla Marketing</div>
+                <h2 class="text-5xl md:text-6xl font-bold brand-font mb-4">Spread the Word</h2>
+                <p class="max-w-lg mx-auto">
+                    Love the server? Print these posters, stick them up in your school or city (legally, of course!), and help the community grow.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="group relative">
+                    <div class="aspect-[2/3] overflow-hidden rounded-xl border border-white/10 bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1627856014759-08529bdb4ea3?q=80&w=1887&auto=format&fit=crop" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 1">
+                        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
+                            <h4 class="text-white font-bold text-xl">The Explorer</h4>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-full mt-4 gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        Download PDF
+                    </button>
+                </div>
+
+                <div class="group relative mt-0 md:-mt-10"> <div class="aspect-[2/3] overflow-hidden rounded-xl border-2 border-primary/50 bg-gray-900 relative shadow-[0_0_30px_rgba(87,13,248,0.3)]">
+                        <img src="https://images.unsplash.com/photo-1599553535916-24b81df9d615?q=80&w=1887&auto=format&fit=crop" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 2">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-4xl font-black text-white/20 -rotate-12 border-4 border-white/20 p-2">JOIN US</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
+                            <h4 class="text-white font-bold text-xl">Minimalist QR</h4>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary w-full mt-4 gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        Download PDF
+                    </button>
+                </div>
+
+                <div class="group relative">
+                    <div class="aspect-[2/3] overflow-hidden rounded-xl border border-white/10 bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 3">
+                        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
+                            <h4 class="text-white font-bold text-xl">Retro Vibe</h4>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-full mt-4 gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        Download PDF
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn">Website</a>
+         <a class="btn">Wiki</a>
+    </div>
+
+</Layout>

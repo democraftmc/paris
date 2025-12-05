@@ -1,21 +1,59 @@
 ---
 
 ---
-<div class="hero bg-base-200 py-32">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    <img
-      src="https://wiki.democraft.fr/api/lobby"
-      class="md:w-1/2 rounded-lg shadow-2xl"
-    />
-    <div class="md:w-1/2">
-      <h1 class="text-5xl font-bold">
-        Nous, c'est
-        <img class="pt-4 md:h-20 w-auto" src="/images/titre-democraft.png"/>
-      </h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-    </div>
-  </div>
+<div class="relative w-full h-[45vh] md:h-[70vh] overflow-hidden">
+
+ <div id="bg" class="absolute md:m-16 inset-0 rounded-b-2xl md:rounded-2xl bg-cover bg-center bg-no-repeat" style="background-image: url('https://wiki.democraft.fr/api/lobby');"></div>   
+    <div class="relative z-10 container mx-auto px-4 pointer-events-none flex items-center h-full w-full min-h-full">
+            <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-8 w-full">
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end pointer-events-auto md:mr-8">
+                    <div class="group relative w-full max-w-lg max-sm:h-16 aspect-video rounded-2xl border-4 border-white/10 cursor-pointer transition-all duration-700 ease-in-out
+                                bg-transparent
+                                shadow-[0_0_20px_rgba(0,0,0,0.5),_0_0_0_200vmax_var(--color-base-100)]
+                                hover:border-transparent
+                                hover:scale-105
+                                hover:shadow-[0_0_50px_rgba(255,255,255,0.2),_0_0_0_200vmax_rgba(17,24,39,0)]">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                             <span class="px-4 py-2 bg-black/40 text-white rounded-full text-sm font-bold backdrop-blur-sm border border-white/20 group-hover:opacity-0 transition-opacity duration-300">
+                                Survolle Moi
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="w-full lg:w-1/2 text-center lg:text-left space-y-6 z-20 pointer-events-auto md:ml-8">
+                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tight drop-shadow-lg">
+                        Nous Sommes
+                        <img class="pt-4 md:h-20 w-auto" src="/images/titre-democraft.png"/>
+                    </h1>
+                    
+                    <p class="text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Une équipe de passionnés de Minecraft à la recherche de nouvelles recrues pour rejoindre notre aventure.
+                    </p>
+                </div>
+
+            </div>
+        </div>
 </div>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+        const backgroundImageList = [
+            "/lobby/0.png",
+            "/lobby/1.jpeg",
+            "/lobby/2.jpeg",
+            "/lobby/3.jpeg",
+            "/lobby/4.jpeg",
+            "/lobby/5.jpeg",
+            "/lobby/6.jpeg",
+            "/lobby/7.jpeg",
+            "/lobby/8.png",
+            "/lobby/vaati1.png",
+            "/lobby/vaati2.png",
+            "/lobby/vaati3.png",
+        ]
+        const randomBackgroundImage = backgroundImageList[Math.floor(Math.random() * backgroundImageList.length)];
+        document.getElementById('bg').style.backgroundImage = `url(${randomBackgroundImage})`;
+        console.log("Set hero background to:", randomBackgroundImage);
+    })
+</script>
