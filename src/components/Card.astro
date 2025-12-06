@@ -1,11 +1,13 @@
 ---
+import Image from "astro/components/Image.astro"
+
 const { title  = "Cool",
         logo  = "/logos/3.png",
         badges = ["1", "2", "3"]
 } = Astro.props
 ---
 
-<a class="hover-3d cursor-pointer">
+<div class="hover-3d cursor-pointer">
     <div class="card w-full bg-base-100 border-2 border-base-content/20 shadow-sm">
         <div class="card-body">
             <div class="flex justify-between">
@@ -19,7 +21,7 @@ const { title  = "Cool",
                     </div>
                     <h2 class="text-2xl font-bold">{ title }</h2>
                 </div>
-                <img src={logo} class="h-14 w-14 rounded-lg" />
+                <Image height={14} width={14} src={logo} class="h-14 w-14 rounded-lg" alt={`${title}'s Logo`} />
             </div>
             <div>
                 <slot />
@@ -34,4 +36,4 @@ const { title  = "Cool",
     <div></div>
     <div></div>
     <div></div>
-</a>
+</div>
