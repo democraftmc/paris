@@ -1,7 +1,15 @@
 ---
+import { Image } from "astro:assets";
+import demo_love from '../images/demo_love.png';
 ---
 <footer class="footer footer-horizontal footer-center bg-base-300 text-base-content p-4 gap-1">
-  <img class="h-20 w-auto" src="/images/demo_love.png" alt="DEMO and CACTOUS giving you love <3" loading="lazy"/>
+  <Image 
+    class="h-20 w-auto" 
+    src={demo_love} 
+    alt="DEMO and CACTOUS giving you love <3" 
+    loading="lazy"
+    width={256}
+  />
   <aside>
     <!--button onclick="toggleTheme()" class="btn" data-toggle-theme="dark,light" data-act-class="">Change your theme</button-->
     <p>Copyright © {new Date().getFullYear()} - ARR DEMOCRAFT STUDIOS</p>

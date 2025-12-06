@@ -1,5 +1,6 @@
 ---
-
+import { Image } from "astro:assets";
+import titreDemocraft from "../../images/titre-democraft.png";
 ---
 <div class="relative w-full h-[55vh] md:h-[70vh] overflow-hidden">
 
@@ -24,7 +25,7 @@
                 <div class="w-full lg:w-1/2 text-center lg:text-left space-y-6 z-20 pointer-events-auto md:ml-8">
                     <h1 class="text-5xl lg:text-7xl font-bold tracking-tight drop-shadow-lg">
                         Nous Sommes
-                        <img class="pt-4 md:h-20 w-auto" src="/images/titre-democraft.png" alt="Logo Textuel DEMOCRAFT"/>
+                        <Image class="pt-4 md:h-20 w-auto" src={titreDemocraft} alt="Logo Textuel DEMOCRAFT"/>
                     </h1>
                     
                     <p class="text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">

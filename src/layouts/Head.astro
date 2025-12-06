@@ -1,6 +1,10 @@
 ---
 import "../assets/app.css";
 const { title } = Astro.props;
+import { getImage } from "astro:assets";
+import demoLove from "../images/demo_love.png";
+
+const optimizedOgImage = await getImage({src: demoLove, format: 'png'});
 ---
 
 <head>
@@ -21,12 +25,9 @@ const { title } = Astro.props;
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="DEMOCRAFT is a community-driven Minecraft project focused on creating an inclusive and innovative gaming experience. Join us in building a vibrant world where creativity and collaboration thrive." />
+    <meta name="og:title" content={title} />
+    <meta name="og:description" content="DEMOCRAFT is a community-driven Minecraft project focused on creating an inclusive and innovative gaming experience. Join us in building a vibrant world where creativity and collaboration thrive." />
+    <meta name="og:image" content={optimizedOgImage.src} />
     <title>{title}</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet"
-    />
 </head>

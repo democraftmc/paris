@@ -1,6 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import dcArmyPoster from "../../images/D.C.ARMY.png";
 ---
 
 <Layout title="DEMOCRAFT | Share the Fun">
@@ -39,7 +41,7 @@ import { Icon } from "astro-icon/components";
 
     <div id="join" class="hero md:min-h-[80vh] bg-base-100 relative overflow-hidden">
         <div class="hero-content flex-col lg:flex-row-reverse gap-12 w-full px-4 py-20">
-            <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/java3a.png" class="lg:w-1/2 rounded-2xl shadow-2xl w-full object-cover h-[200px] md:h-[400px]" alt="Player Gaming" />
+            <Image src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/java3a.png" class="lg:w-1/2 rounded-2xl shadow-2xl w-full object-cover h-[200px] md:h-[400px]" alt="Player Gaming" inferSize={true} />
             
 
             <div class="lg:w-1/2">
@@ -85,7 +87,7 @@ import { Icon } from "astro-icon/components";
                 
                 <div class="group relative">
                     <div class="aspect-[2/3] overflow-hidden rounded-xl bg-gray-900 relative">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 1">
+                        <Image src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 1" width={600} height={900} />
                         <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
                             <h4 class="text-white font-bold text-xl">The Explorer</h4>
                         </div>
@@ -98,7 +100,7 @@ import { Icon } from "astro-icon/components";
 
                 <div class="group relative mt-0 md:-mt-12">
                     <div class="aspect-[2/3] overflow-hidden rounded-xl bg-gray-900 relative">
-                        <img src="/posters/D.C.ARMY.png" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 2">
+                        <Image src={dcArmyPoster} class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 2" />
                         <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
                             <h4 class="text-white font-bold text-xl">D.C. ARMY</h4>
                         </div>
@@ -115,7 +117,7 @@ import { Icon } from "astro-icon/components";
 
                 <div class="group relative">
                     <div class="aspect-[2/3] overflow-hidden rounded-xl border border-white/10 bg-gray-900 relative">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 3">
+                        <Image src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 3" width={600} height={900} />
                         <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
                             <h4 class="text-white font-bold text-xl">Retro Vibe</h4>
                         </div>

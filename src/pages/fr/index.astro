@@ -4,6 +4,12 @@ import Card from "../../components/Card.astro";
 import Hero from "../../components/fr/Hero.astro";
 import Mission from "../../components/fr/Mission.astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";   
+import screen from '../../images/screen.png';
+import metaCtxLogo from "../../images/logos/MetaCtx.webp";
+import playRoundLogo from "../../images/logos/PlayRound.webp";
+import smartLogo from "../../images/logos/Smart.webp";
+import phytlasLogo from "../../images/logos/Phytlas.png";
 ---
 
 <Layout title="Nous Sommes DEMOCRAFT">
@@ -20,7 +26,7 @@ import { Icon } from "astro-icon/components";
             <Card
                 title="MetaCtx"
                 badges={["Java", "Minecraft"]}
-                logo="/logos/MetaCtx.webp"
+                logo={metaCtxLogo}
             >
                 <p>
                     Traduction adaptative utilisant le système de contexte LuckPerms, <u
@@ -32,7 +38,7 @@ import { Icon } from "astro-icon/components";
             <Card
                 title="PlayRound"
                 badges={["UI", "UX", "CSS"]}
-                logo="/logos/PlayRound.webp"
+                logo={playRoundLogo}
             >
                 <p>
                     Bibliothèque UI complète pour toutes les applications web de DEMOCRAFT.
@@ -42,7 +48,7 @@ import { Icon } from "astro-icon/components";
             <Card
                 title="RC Smart"
                 badges={["Java", "Abstract"]}
-                logo="/logos/Smart.webp"
+                logo={smartLogo}
             >
                 <p>
                     Orchestrateur de serveurs : Créez, mettez à jour et supprimez des serveurs à la volée, pour gérer dynamiquement les ressources.
@@ -52,7 +58,7 @@ import { Icon } from "astro-icon/components";
             <Card
                 title="Phytlas"
                 badges={["Python", "JSON", "Geyser"]}
-                logo="/logos/Phytlas.png"
+                logo={phytlasLogo}
             >
                 <p>En français, on appelle cela une "Usine à Gaz".<br /> Convertisseur de modèles 3D construit en Python pur, compatible avec Geyser.</p>
             </Card>
@@ -67,9 +73,16 @@ import { Icon } from "astro-icon/components";
             </div>
         </div>
 
-        <div class="bg-[url('/images/screen.png')] bg-cover bg-center bg-no-repeat min-h-96 rounded-xl mx-4 md:mx-24 mt-12 shadow-lg
-                    flex flex-col items-center justify-center text-center text-white
+        <div class="relative min-h-96 rounded-xl mx-4 md:mx-24 mt-12 shadow-lg
+                    flex flex-col items-center justify-center text-center text-white overflow-hidden
             ">
+            <Image
+                src={screen}
+                alt="Background screenshot"
+                width={512}
+                height={512}
+                class="absolute inset-0 w-full h-full object-cover -z-10"
+            />
             <div class="backdrop-blur-xs w-full h-full py-10 md:py-20 bg-black/10 rounded-xl flex flex-col items-center justify-center p-4 gap-4">
             <h2 class="text-2xl md:text-4xl font-bold">Rejoignez Nous !</h2>
             <p>Partant ? Contactez notre équipe pour commencer à construire l'avenir de DEMOCRAFT.</p>

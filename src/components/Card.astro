@@ -1,8 +1,9 @@
 ---
-import Image from "astro/components/Image.astro"
+import { Image } from "astro:assets";
+import defaultLogo from "../images/logos/3.png";
 
 const { title  = "Cool",
-        logo  = "/logos/3.png",
+        logo  = defaultLogo,
         badges = ["1", "2", "3"]
 } = Astro.props
 ---
@@ -21,7 +22,7 @@ const { title  = "Cool",
                     </div>
                     <h2 class="text-2xl font-bold">{ title }</h2>
                 </div>
-                <Image height={14} width={14} src={logo} class="h-14 w-14 rounded-lg" alt={`${title}'s Logo`} />
+                <Image src={logo} class="h-14 w-14 rounded-lg" alt={`${title}'s Logo`} width={56} height={56} />
             </div>
             <div>
                 <slot />

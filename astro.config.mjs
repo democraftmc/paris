@@ -14,5 +14,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [icon(), mdx(), lenis(), sitemap()]
+  integrations: [icon(), mdx(), lenis(), sitemap()],
+  image: {
+    domains: ["us-east-1.tixte.net"],
+  }
 });

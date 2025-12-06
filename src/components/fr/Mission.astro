@@ -1,13 +1,14 @@
 ---
-import Image from "astro/components/Image.astro"
+import { Image } from "astro:assets";
+import diagram from '../../images/link-editions.png';
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 px:2 md:px-12 my-12">
   <Image
-    height={600}
-    width={600}
-    src="/images/link-editions.png"
-    class="rounded-lg px-2 md:px-8"
+    height={512}
+    width={512}
+    src={diagram}
+    class="rounded-lg px-2 md:px-8 w-full"
     alt="Schéma des éditions compatibles de DEMOCRAFT"
     loading="eager"
   />
