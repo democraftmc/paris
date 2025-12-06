@@ -26,46 +26,44 @@ import { Icon } from "astro-icon/components";
                      Share the joy and invite your friends to join the adventure!
                 </p>
 
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="#step-1" class="btn btn-outline btn-wide text-white border-white/30 hover:bg-white hover:text-black hover:border-white">
-                        How to Join
-                    </a>
-                </div>
+                <a href="#join" class="btn btn-outline btn-wide max-sm:w-full">
+                    How to Join
+                </a>
             </div>
         </div>
         
         <div class="absolute bottom-10 w-full flex justify-center animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+            <Icon name="lucide:arrow-down" class="h-8 w-8 text-white/50" />
         </div>
     </div>
 
-    <div id="step-1" class="hero min-h-[80vh] bg-base-100 relative overflow-hidden">
-        <div class="hero-content flex-col lg:flex-row-reverse gap-12 w-full px-2 py-20">
-            <div class="lg:w-1/2 relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" class="relative rounded-2xl shadow-2xl w-full object-cover h-[400px] border border-white/10" alt="Player Gaming" />
-            </div>
+    <div id="join" class="hero md:min-h-[80vh] bg-base-100 relative overflow-hidden">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-12 w-full px-4 py-20">
+            <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/java3a.png" class="lg:w-1/2 rounded-2xl shadow-2xl w-full object-cover h-[200px] md:h-[400px]" alt="Player Gaming" />
+            
 
-            <div class="lg:w-1/2 relative z-10">
+            <div class="lg:w-1/2">
                 <h2 class="text-5xl font-bold brand-font mb-6">Built for <span class="italic text-primary">Everyone</span>.</h2>
                 <p class="text-lg mb-6 leading-relaxed">
                     Democraft isn't about us—it's about you. We mixed all of avaibles technologies to allow you to play whith whatever you want, <i>event your fridge</i>.
                 </p>
-                <div class="w-full bg-warning text-warning-content p-4 rounded-2xl">
-                    <Icon name="lucide:triangle-alert" class="inline-block w-7 h-7 m-2" />
-                    Due to hosting costs, only one gamemode (survival) is hosted and playable today.
-                    This server is still avaible to everyone, and allows us to showcase what we can do with our custom texture system.
+                <div role="alert" class="alert alert-warning shadow-lg">
+                    <Icon name="lucide:triangle-alert" class="stroke-current shrink-0 h-6 w-6" />
+                    <span>
+                        Due to hosting costs, only one gamemode (survival) is hosted and playable today.
+                        This server is still available to everyone, and allows us to showcase what we can do with our custom texture system.
+                    </span>
                 </div>
-                <div class="flex gap-2">
-                    <a target="_blank" href="https://wiki.democraft.fr/welcome/connexion/java" class="btn btn-primary mt-6 gap-2">
+                <div class="flex flex-col md:flex-row gap-2 mt-6">
+                    <a target="_blank" href="https://wiki.democraft.fr/welcome/connexion/java" class="btn btn-primary gap-2">
                         <Icon name="lucide:gamepad" class="inline-block w-5 h-5" />
                         Join Democraft
                     </a>
-                    <a target="_blank" href="https://wiki.democraft.fr/welcome/connexion/magik" class="btn btn-secondary mt-6 gap-2">
+                    <a target="_blank" href="https://wiki.democraft.fr/welcome/connexion/magik" class="btn btn-secondary gap-2">
                         <Icon name="lucide:book-open" class="inline-block w-5 h-5" />
                         Console Setup Guide
                     </a>
-                    <a target="_blank" href="https://democraft.fr" class="btn btn-outline mt-6 gap-2">
+                    <a target="_blank" href="https://democraft.fr" class="btn btn-outline gap-2">
                         <Icon name="lucide:globe" class="inline-block w-5 h-5" />
                         Our Website
                     </a>
@@ -74,7 +72,7 @@ import { Icon } from "astro-icon/components";
         </div>
     </div>
 
-    <div class="min-h-screen bg-base-300 relative py-20 px-2 md:px-6">
+    <div class="min-h-screen bg-base-300 relative py-20 px-4 md:px-6">
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-5xl md:text-6xl font-bold brand-font mb-4">Spread the Word</h2>
@@ -83,29 +81,34 @@ import { Icon } from "astro-icon/components";
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
                 
                 <div class="group relative">
-                    <div class="aspect-[2/3] overflow-hidden rounded-xl border border-white/10 bg-gray-900 relative">
+                    <div class="aspect-[2/3] overflow-hidden rounded-xl bg-gray-900 relative">
                         <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 1">
                         <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
                             <h4 class="text-white font-bold text-xl">The Explorer</h4>
                         </div>
                     </div>
                     <a class="btn btn-primary w-full mt-4 gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        <Icon name="lucide:download" class="h-5 w-5" />
                         Download PDF
                     </a>
                 </div>
 
-                <div class="group relative mt-0 md:-mt-10"> <div class="aspect-[2/3] overflow-hidden rounded-xl border-2 border-primary/50 bg-gray-900 relative shadow-[0_0_30px_rgba(87,13,248,0.3)]">
+                <div class="group relative mt-0 md:-mt-12">
+                    <div class="aspect-[2/3] overflow-hidden rounded-xl bg-gray-900 relative">
                         <img src="/posters/D.C.ARMY.png" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Poster 2">
                         <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
                             <h4 class="text-white font-bold text-xl">D.C. ARMY</h4>
                         </div>
                     </div>
-                    <a href="/posters/D.C.ARMY.pdf" class="btn btn-secondary w-full mt-4 gap-2" download>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                    <a href="/posters/D.C.ARMY.png" class="btn btn-secondary w-full mt-2 gap-2" download>
+                        <Icon name="lucide:download" class="h-5 w-5" />
+                        Download Image
+                    </a>
+                    <a href="/posters/D.C.ARMY.pdf" class="btn btn-secondary w-full mt-2 gap-2" download>
+                        <Icon name="lucide:download" class="h-5 w-5" />
                         Download PDF
                     </a>
                 </div>
@@ -118,7 +121,7 @@ import { Icon } from "astro-icon/components";
                         </div>
                     </div>
                     <a class="btn btn-primary w-full mt-4 gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        <Icon name="lucide:download" class="h-5 w-5" />
                         Download PDF
                     </a>
                 </div>
