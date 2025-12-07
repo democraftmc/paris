@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import titreDemocraft from "../../images/titre-democraft.png";
 ---
 <div class="relative w-full h-[55vh] md:h-[70vh] overflow-hidden">
@@ -30,6 +31,14 @@ import titreDemocraft from "../../images/titre-democraft.png";
                     
                     <p class="text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                         Une équipe de passionnés de Minecraft à la recherche de nouvelles recrues pour rejoindre notre aventure.
+                    </p>
+                    <p class="italic">
+                        Vous êtes un joueur ? Nous avons créé un
+                        <a href="/fr/share" class="text-primary font-bold underline inline-flex gap-1 items-center">
+                            Guide de Connexion
+                            <Icon name="lucide:square-arrow-out-up-right" />
+                        </a>
+                         rien que pour vous !
                     </p>
                 </div>
 
