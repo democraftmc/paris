@@ -7,6 +7,7 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";   
 import screen from '../../images/screen.png';
 import metaCtxLogo from "../../images/logos/MetaCtx.webp";
+import brikLogo from "../../images/logos/Brik.png";
 import playRoundLogo from "../../images/logos/PlayRound.webp";
 import smartLogo from "../../images/logos/Smart.webp";
 import phytlasLogo from "../../images/logos/Phytlas.png";
@@ -16,16 +17,23 @@ import phytlasLogo from "../../images/logos/Phytlas.png";
     <Hero />
     <Mission />
     <div class="py-12">
-        <h1 class="text-center text-5xl font-bold">Projects</h1>
+        <h1 class="text-center text-3xl md:text-5xl font-bold">Projects</h1>
         <p class="text-center text-lg mb-6 px-4 pt-6">
             Want to help us? Here are some projects that need your talents!
             <br>
             Whether you are a developer, a designer, or an artist, we have a place for you.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 my-6 px-4 md:px-24">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 my-6 px-4 md:px-24">
+            <Card
+                title="Brik"
+                badges={["🧱 Modeling", "✏️ Pixel Art"]}
+                logo={brikLogo}
+            >
+                <p>Collection of 2D textures and 3D models that make up the various visual elements of the DEMOCRAFT server.</p>
+            </Card>
             <Card
                 title="MetaCtx"
-                badges={["Java", "Minecraft"]}
+                badges={["☕ Java", "💬 Translation"]}
                 logo={metaCtxLogo}
             >
                 <p>
@@ -37,7 +45,7 @@ import phytlasLogo from "../../images/logos/Phytlas.png";
             </Card>
             <Card
                 title="PlayRound"
-                badges={["UI", "UX", "CSS"]}
+                badges={["🎨 UI", "🪟 UX", "🖌️ CSS"]}
                 logo={playRoundLogo}
             >
                 <p>
@@ -47,7 +55,7 @@ import phytlasLogo from "../../images/logos/Phytlas.png";
             </Card>
             <Card
                 title="RC Smart"
-                badges={["Java", "Abstract"]}
+                badges={["☕ Java", "🌌 Abstract"]}
                 logo={smartLogo}
             >
                 <p>
@@ -58,12 +66,12 @@ import phytlasLogo from "../../images/logos/Phytlas.png";
             </Card>
             <Card
                 title="Phytlas"
-                badges={["Python", "JSON", "Geyser"]}
+                badges={["🐍 Python", "🗄️ JSON"]}
                 logo={phytlasLogo}
             >
                 <p>In French, we call this a "Usine à Gaz".<br /> 3D model converter built in pure Python, compatible with Geyser.</p>
             </Card>
-            <div class="md:col-span-4 flex flex-col sm:flex-row justify-center mt-6 gap-1 justify-items-center items-center">
+            <div class="col-span-1 lg:col-span-5 flex flex-col sm:flex-row justify-center mt-6 gap-1 justify-items-center items-center">
                 <span><i>Don't have any fancy talents yet?</i></span>
                 <span>Help us by
                 <a class="inline-block font-bold text-primary link link-hover" href="/en/share">
@@ -85,7 +93,7 @@ import phytlasLogo from "../../images/logos/Phytlas.png";
                 class="absolute inset-0 w-full h-full object-cover -z-10"
             />
             <div class="backdrop-blur-xs w-full h-full py-10 md:py-20 bg-black/10 rounded-xl flex flex-col items-center justify-center p-4 gap-4">
-            <h2 class="text-2xl md:text-4xl font-bold">Join Us!</h2>
+            <h2 class="text-3xl md:text-5xl font-bold">Join Us!</h2>
             <p>Feel it? Get in touch with our team to start building the future of DEMOCRAFT.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="flex flex-col gap-2 w-full">
